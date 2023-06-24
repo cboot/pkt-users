@@ -7,8 +7,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class CreateUserUseCase {
 
-    public CreateUserOutput execute(CreateUserInput input) {
-
-        return CreateUserOutput.builder().build();
-    }
+  public CreateUserOutput execute(CreateUserInput input) {
+    return CreateUserOutput.builder().build();
+  }
 }
