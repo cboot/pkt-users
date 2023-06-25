@@ -3,9 +3,9 @@ package com.poketroll.users.api.model;
 import lombok.Builder;
 import lombok.Data;
 
-@Builder
 @Data
-public class CreateUserResponse {
+@Builder
+public class GetUserResponse {
 
   private long id;
 

@@ -1,4 +1,6 @@
-package com.poketroll.users.api;
+package com.poketroll.users.api.controllers;
+
+import static com.poketroll.users.config.ApiConstants.V1;
 
 import com.poketroll.users.api.model.CreateUserRequest;
 import com.poketroll.users.api.model.CreateUserResponse;
@@ -14,8 +16,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import static com.poketroll.users.config.ApiConstants.V1;
-
 @RestController
 @RequestMapping(V1 + "users")
 @RequiredArgsConstructor
@@ -25,7 +25,7 @@ public class AddUserController {
   private final Mapper<CreateUserRequest, CreateUserInput> inputMapper;
   private final Mapper<CreateUserOutput, CreateUserResponse> outputMapper;
 
-  @PostMapping
+  @PostMapping("/")
   public ResponseEntity<CreateUserResponse> execute(@Valid @RequestBody CreateUserRequest request) {
 
     CreateUserInput input = inputMapper.map(request);

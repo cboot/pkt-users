@@ -1,15 +1,13 @@
-package com.poketroll.users.api.model;
+package com.poketroll.users.domain.usecases.model;
 
 import lombok.Builder;
 import lombok.Data;
 
-@Builder
 @Data
-public class CreateUserResponse {
+@Builder
+public class GetUserOutput {
 
   private long id;
-
   private String name;
-
   private String email;
 }

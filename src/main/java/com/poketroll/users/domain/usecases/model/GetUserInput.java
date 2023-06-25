@@ -5,11 +5,7 @@ import lombok.Data;
 
 @Data
 @Builder
-public class CreateUserOutput {
+public class GetUserInput {
 
   private long id;
-
-  private String name;
-
-  private String email;
 }
